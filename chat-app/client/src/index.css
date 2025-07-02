@@ -1,0 +1,122 @@
+/* index.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f7f5;
+  color: #2d2d2d;
+}
+
+input, button {
+  font-family: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Centered text for headings */
+h1, h2, h3, h4 {
+  text-align: center;
+  color: #2f5d50;
+}
+
+/* Chat container */
+.chat-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Chat messages area */
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #d1e0d0;
+  background: white;
+  border-radius: 8px;
+}
+
+/* Message bubble */
+.message {
+  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.message.you {
+  align-self: flex-end;
+  background-color: #c8e6c9;
+}
+
+.message.other {
+  align-self: flex-start;
+  background-color: #e0f2f1;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type='text'], input[type='file'] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .messages {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scrollbar customization */
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #a4d4ae;
+  border-radius: 4px;
+}
